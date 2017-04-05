@@ -39,6 +39,7 @@
       <hr>
 
       <div class="row">
+      <h4>Player 1</h4>
         <div class="col-xs-2">
         <button ng-disabled="getTurn1()" ng-click="makePlay(hand1[0])" type="button" class="btn btn-link">
           <img style="width:100px;" ng-src="{{hand1[0]}}"/>
@@ -55,9 +56,17 @@
         </button>
         </div>
       </div>
-
-
+      <br>
+      <hr>
         <div class="row">
+          <h4>Game Board</h4>
+          <div class="col-xs-5">
+            <img style="width:100px;" ng-src="{{play[0]}}">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+         <h4>Player 2</h4>
           <div class="col-xs-2">
           <button ng-disabled="getTurn2()" ng-click="makePlay(hand2[0])" type="button" class="btn btn-link">
             <img style="width:100px;" ng-src="{{hand2[0]}}"/>
@@ -68,13 +77,13 @@
             <img style="width:100px;" ng-src="{{hand2[1]}}"/>
           </button>
           </div>
-          <div class="col-xs-2">
-          <button ng-disabled="getTurn2()" ng-click="makePlay(hand2[2])" type="button" class="btn btn-link">
+          <div remove-on-click ng-click="remove()" class="col-xs-2">
+          <button  ng-disabled="getTurn2()" ng-click="makePlay(hand2[2])" type="button" class="btn btn-link">
             <img style="width:100px;" ng-src="{{hand2[2]}}"/>
           </button>
           </div>
         </div>
-
+        <br><br>
 
 
     </div>

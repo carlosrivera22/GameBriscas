@@ -1,5 +1,14 @@
-angular.module('briscasApp', [])
-  .controller('BriscasController', function($scope) {
+var app = angular.module('briscasApp', []);
+  app.directive('removeOnClick', function() {
+    return {
+        link: function(scope, elt, attrs) {
+            scope.remove = function() {
+                elt.html('');
+            };
+        }
+    }
+});
+  app.controller('BriscasController', function($scope) {
 
           //array of cards
           $scope.deck = ["/img/0.png","img/Bastos1.gif","img/Bastos2.gif","img/Bastos3.gif","img/Bastos4.gif","img/Bastos5.gif","img/Bastos6.gif",
@@ -55,7 +64,13 @@ angular.module('briscasApp', [])
 
           $scope.makePlay = function(card){
               $scope.play.push(card);
-              console.log($scope.play);
+              console.log($scope.hand2);
+              if(turn1){
+                $scope.remove_card($scope.hand2,card);
+              }else{
+                $scope.remove_card($scope.hand1,card);
+              }
+              console.log($scope.hand2);
               $scope.switchTurns()
           }
 
@@ -78,5 +93,20 @@ angular.module('briscasApp', [])
 
           }
 
+          $scope.remove_card = function(arr, card){
+            for(i=0;i<arr.length;i++){
+              if(card == arr[i]){
+              //  $scope.removeDummy();
+              }
+            }
+          }
+
+/*
+    $scope.removeDummy = function(){
+      var elem = document.getElementById("dummy");
+      elem.parentNode.removeChild(elem);
+      return false;
+    }
+*/
 
       });
