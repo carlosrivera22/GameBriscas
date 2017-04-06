@@ -8,6 +8,56 @@ var app = angular.module('briscasApp', []);
         }
     }
 });
+
+app.directive('removeOnClick2', function() {
+  return {
+      link: function(scope, elt, attrs) {
+          scope.remove2 = function() {
+              elt.html('');
+          };
+      }
+  }
+});
+
+app.directive('removeOnClick3', function() {
+  return {
+      link: function(scope, elt, attrs) {
+          scope.remove3 = function() {
+              elt.html('');
+          };
+      }
+  }
+});
+
+app.directive('removeOnClick4', function() {
+  return {
+      link: function(scope, elt, attrs) {
+          scope.remove4 = function() {
+              elt.html('');
+          };
+      }
+  }
+});
+
+app.directive('removeOnClick5', function() {
+  return {
+      link: function(scope, elt, attrs) {
+          scope.remove5 = function() {
+              elt.html('');
+          };
+      }
+  }
+});
+
+app.directive('removeOnClick6', function() {
+  return {
+      link: function(scope, elt, attrs) {
+          scope.remove6 = function() {
+              elt.html('');
+          };
+      }
+  }
+});
   app.controller('BriscasController', function($scope) {
 
           //array of cards
@@ -101,12 +151,5 @@ var app = angular.module('briscasApp', []);
             }
           }
 
-/*
-    $scope.removeDummy = function(){
-      var elem = document.getElementById("dummy");
-      elem.parentNode.removeChild(elem);
-      return false;
-    }
-*/
 
       });
