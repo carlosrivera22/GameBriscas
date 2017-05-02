@@ -1,79 +1,51 @@
 var app = angular.module('briscasApp', []);
-  app.directive('removeOnClick', function() {
+
+  app.directive('onFinishRender', function ($timeout) {
     return {
-        link: function(scope, elt, attrs) {
-            scope.remove = function() {
-                elt.html('');
-            };
+        restrict: 'A',
+        link: function (scope, element, attr) {
+            if (scope.$last === true) {
+                $timeout(function () {
+                    scope.$emit(attr.onFinishRender);
+                });
+            }
         }
     }
 });
 
-app.directive('removeOnClick2', function() {
-  return {
-      link: function(scope, elt, attrs) {
-          scope.remove2 = function() {
-              elt.html('');
-          };
-      }
-  }
-});
-
-app.directive('removeOnClick3', function() {
-  return {
-      link: function(scope, elt, attrs) {
-          scope.remove3 = function() {
-              elt.html('');
-          };
-      }
-  }
-});
-
-app.directive('removeOnClick4', function() {
-  return {
-      link: function(scope, elt, attrs) {
-          scope.remove4 = function() {
-              elt.html('');
-          };
-      }
-  }
-});
-
-app.directive('removeOnClick5', function() {
-  return {
-      link: function(scope, elt, attrs) {
-          scope.remove5 = function() {
-              elt.html('');
-          };
-      }
-  }
-});
-
-app.directive('removeOnClick6', function() {
-  return {
-      link: function(scope, elt, attrs) {
-          scope.remove6 = function() {
-              elt.html('');
-          };
-      }
-  }
-});
   app.controller('BriscasController', function($scope) {
 
           //array of cards
           $scope.deck = ["/img/0.png","img/Bastos1.gif","img/Bastos2.gif","img/Bastos3.gif","img/Bastos4.gif","img/Bastos5.gif","img/Bastos6.gif",
-          "img/Bastos7.gif","img/Bastos8.gif","img/Bastos9.gif","img/Bastos10.gif","img/Bastos11.gif","img/Bastos12.gif"];
+          "img/Bastos7.gif","img/Bastos8.gif","img/Bastos9.gif","img/Bastos10.gif","img/Bastos11.gif","img/Bastos12.gif","img/Copas1.gif","img/Copas2.gif","img/Copas3.gif","img/Copas4.gif","img/Copas5.gif","img/Copas6.gif",
+          "img/Copas7.gif","img/Copas8.gif","img/Copas9.gif","img/Copas10.gif","img/Copas11.gif","img/Copas12.gif"];
 
           $scope.stack = [];
           $scope.hand1 = [];
           $scope.hand2 = [];
           $scope.play = [];
           $scope.life;
+          $scope.played_cards = [];
+
           var turn1 = true;
           var turn2 = false;
+          var disabled = false;
+          var stack_is_empty = false;
 
+
+          $scope.startGame = function(){
+            $scope.fillStack();
+            $scope.getHand1();
+            $scope.getHand2();
+            $scope.getLife();
+            disabled = true;
+          }
+
+          $scope.disabled = function(){
+            return disabled;
+          }
           //function that fills the deck stack
-          $scope.fill_stack = function(){
+          $scope.fillStack = function(){
 
             while($scope.deck.length > 1){
                 do{
@@ -84,10 +56,6 @@ app.directive('removeOnClick6', function() {
               $scope.deck.splice(rand,1);
 
             }
-
-            $scope.getHand1();
-            $scope.getHand2();
-            $scope.getLife();
 
           }
 
@@ -113,15 +81,17 @@ app.directive('removeOnClick6', function() {
           }
 
           $scope.makePlay = function(card){
+
               $scope.play.push(card);
-              console.log($scope.hand2);
+
               if(turn1){
-                $scope.remove_card($scope.hand2,card);
+                $scope.removeCard($scope.hand2,card);
               }else{
-                $scope.remove_card($scope.hand1,card);
+                $scope.removeCard($scope.hand1,card);
               }
-              console.log($scope.hand2);
+
               $scope.switchTurns()
+
           }
 
             $scope.getTurn1 = function(){
@@ -143,13 +113,69 @@ app.directive('removeOnClick6', function() {
 
           }
 
-          $scope.remove_card = function(arr, card){
-            for(i=0;i<arr.length;i++){
-              if(card == arr[i]){
-              //  $scope.removeDummy();
+          $scope.removeCard = function(arr, card){
+              index = arr.indexOf(card);
+              if(index > -1){
+                  arr.splice(index,1);
               }
+
+          }
+
+          $scope.evaluatePlay = function(){
+              alert("Card 1 won this play");
+              $scope.clearBoard();
+          }
+
+          $scope.clearBoard = function(){
+            //determine who wins the round...
+            //for now this function will randomly determine a winner for testing
+            //for now it will not works
+              $scope.removeCard($scope.play,$scope.play[0]);
+              $scope.removeCard($scope.play,$scope.play[0]);
+              $scope.played_cards.push($scope.play[0]);
+              $scope.played_cards.push($scope.play[0]);
+
+          }
+
+          $scope.deckIsNotEmpty = function(){
+            return !stack_is_empty;
+          }
+
+          $scope.lifeIsDrawn = function(){
+            if($scope.hand2.indexOf($scope.life) != -1 || $scope.hand1.indexOf($scope.life) != -1 || $scope.play.indexOf($scope.life) != -1 || $scope.played_cards.indexOf($scope.life) != -1){
+              return false;
+            }else{
+              return true;
             }
           }
 
+          $scope.drawCard = function(){
+            //function will change for the order of draw, winner draws first
+            if($scope.stack.length > 1){
+              //draw for both hands
+              $scope.hand1.push($scope.stack.pop());
+              $scope.hand2.push($scope.stack.pop());
+            }
+            else if($scope.stack.length == 1){
+              //draw for one hand
+              //tomar la vida y si no hay vida entonces una mano coge solamente
+              $scope.hand1.push($scope.stack.pop());
+              $scope.hand2.push($scope.life);
+            }else{
+              stack_is_empty = true;
+            }
+          }
+
+          $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+              //you also get the actual event object
+              //do stuff, execute functions -- whatever...
+
+                if($scope.play.length > 1){
+                  $scope.evaluatePlay();
+                  $scope.drawCard();
+              }
+
+
+          });
 
       });
