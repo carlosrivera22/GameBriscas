@@ -1,5 +1,6 @@
 var app = angular.module('briscasApp', []);
 
+
   app.directive('onFinishRender', function ($timeout) {
     return {
         restrict: 'A',
@@ -141,6 +142,7 @@ var app = angular.module('briscasApp', []);
             return !stack_is_empty;
           }
 
+          /*
           $scope.lifeIsDrawn = function(){
             if($scope.hand2.indexOf($scope.life) != -1 || $scope.hand1.indexOf($scope.life) != -1 || $scope.play.indexOf($scope.life) != -1 || $scope.played_cards.indexOf($scope.life) != -1){
               return false;
@@ -148,7 +150,7 @@ var app = angular.module('briscasApp', []);
               return true;
             }
           }
-
+          */
           $scope.drawCard = function(){
             //function will change for the order of draw, winner draws first
             if($scope.stack.length > 1){
@@ -161,6 +163,7 @@ var app = angular.module('briscasApp', []);
               //tomar la vida y si no hay vida entonces una mano coge solamente
               $scope.hand1.push($scope.stack.pop());
               $scope.hand2.push($scope.life);
+
             }else{
               stack_is_empty = true;
             }
