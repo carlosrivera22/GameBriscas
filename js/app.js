@@ -167,7 +167,152 @@ var app = angular.module('briscasApp', []);
               path:"img/Copas12.gif",
               vida: false,
               denominacion: "Copas",
-            }];
+            },
+            {
+              nombre:"Espadas1",
+              path:"img/Espadas1.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas2",
+              path:"img/Espadas2.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas3",
+              path:"img/Espadas3.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas4",
+              path:"img/Espadas4.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas5",
+              path:"img/Espadas5.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas6",
+              path:"img/Espadas6.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas7",
+              path:"img/Espadas7.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas8",
+              path:"img/Espadas8.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas9",
+              path:"img/Espadas9.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas10",
+              path:"img/Espadas10.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas11",
+              path:"img/Espadas11.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Espadas12",
+              path:"img/Espadas12.gif",
+              vida: false,
+              denominacion: "Espadas",
+            },
+            {
+              nombre:"Oros1",
+              path:"img/Oros1.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros2",
+              path:"img/Oros2.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros3",
+              path:"img/Oros3.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros4",
+              path:"img/Oros4.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros5",
+              path:"img/Oros5.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros6",
+              path:"img/Oros6.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros7",
+              path:"img/Oros7.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros8",
+              path:"img/Oros8.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros9",
+              path:"img/Oros9.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros10",
+              path:"img/Oros10.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros11",
+              path:"img/Oros11.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+            {
+              nombre:"Oros12",
+              path:"img/Oros12.gif",
+              vida: false,
+              denominacion: "Oros",
+            },
+          ];
 
           $scope.briscas_service = briscasService;
 
