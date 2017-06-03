@@ -14,7 +14,7 @@ var app = angular.module('briscasApp', []);
     }
 });
 
-  app.controller('BriscasController', function($scope) {
+  app.controller('BriscasController', function($scope,$http,briscasService) {
 
           //array of cards
           $scope.deck = [
@@ -169,6 +169,17 @@ var app = angular.module('briscasApp', []);
               denominacion: "Copas",
             }];
 
+          $scope.briscas_service = briscasService;
+
+
+          $scope.data_two_v_two = {
+            cards_in_play: $scope.play,
+            agent1_cards: $scope.hand1,
+            agent2_cards: $scope.hand3,
+            agent3_cards: $scope.hand4,
+            played_cards: $scope.played_cards,
+          }
+
           $scope.stack = [];
           $scope.hand1 = [];
           $scope.hand2 = [];
@@ -265,6 +276,7 @@ var app = angular.module('briscasApp', []);
               $scope.play.push(card);
 
               if(turn1){
+                $scope.sendData();
                 $scope.removeCard($scope.hand2,card);
               }else{
                 $scope.removeCard($scope.hand1,card);
@@ -310,10 +322,11 @@ var app = angular.module('briscasApp', []);
             //determine who wins the round...
             //for now this function will randomly determine a winner for testing
             //for now it will not works
-              $scope.removeCard($scope.play,$scope.play[0]);
+              $scope.played_cards.push($scope.play[0]);
               $scope.removeCard($scope.play,$scope.play[0]);
               $scope.played_cards.push($scope.play[0]);
-              $scope.played_cards.push($scope.play[0]);
+              $scope.removeCard($scope.play,$scope.play[0]);
+
 
           }
 
@@ -346,6 +359,17 @@ var app = angular.module('briscasApp', []);
             }else{
               stack_is_empty = true;
             }
+          }
+
+          $scope.sendData = function(){
+            $scope.data_one_v_one = {
+              cards_in_play: $scope.play,
+              agent1_cards: $scope.hand1,
+              played_cards: $scope.played_cards,
+
+            };
+            console.log($scope.data_one_v_one);
+            $scope.briscas_service.sendData($scope.data_one_v_one);
           }
 
           $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
