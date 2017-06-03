@@ -2,3 +2,8 @@
   text-decoration: line-through;
   color: grey;
 }
+
+#game-board{
+  border-style:solid;
+  background-color: #abca6d;
+}

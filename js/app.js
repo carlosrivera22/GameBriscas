@@ -17,17 +17,167 @@ var app = angular.module('briscasApp', []);
   app.controller('BriscasController', function($scope) {
 
           //array of cards
-          $scope.deck = ["/img/0.png","img/Bastos1.gif","img/Bastos2.gif","img/Bastos3.gif","img/Bastos4.gif","img/Bastos5.gif","img/Bastos6.gif",
-          "img/Bastos7.gif","img/Bastos8.gif","img/Bastos9.gif","img/Bastos10.gif","img/Bastos11.gif","img/Bastos12.gif","img/Copas1.gif","img/Copas2.gif","img/Copas3.gif","img/Copas4.gif","img/Copas5.gif","img/Copas6.gif",
-          "img/Copas7.gif","img/Copas8.gif","img/Copas9.gif","img/Copas10.gif","img/Copas11.gif","img/Copas12.gif"];
+          $scope.deck = [
+            {
+              nombre:"",
+              path:"/img/0.png",
+              vida: false,
+              denominacion: "",
+            },
+            {
+              nombre:"Bastos1",
+              path:"img/Bastos1.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos2",
+              path:"img/Bastos2.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos3",
+              path:"img/Bastos3.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos4",
+              path:"img/Bastos4.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos5",
+              path:"img/Bastos5.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos6",
+              path:"img/Bastos6.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos7",
+              path:"img/Bastos7.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos8",
+              path:"img/Bastos8.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos9",
+              path:"img/Bastos9.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos10",
+              path:"img/Bastos10.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos11",
+              path:"img/Bastos11.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Bastos12",
+              path:"img/Bastos12.gif",
+              vida: false,
+              denominacion: "Bastos",
+            },
+            {
+              nombre:"Copas1",
+              path:"img/Copas1.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas2",
+              path:"img/Copas2.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas3",
+              path:"img/Copas3.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas4",
+              path:"img/Copas4.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas5",
+              path:"img/Copas5.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas6",
+              path:"img/Copas6.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas7",
+              path:"img/Copas7.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas8",
+              path:"img/Copas8.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas9",
+              path:"img/Copas9.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas10",
+              path:"img/Copas10.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas11",
+              path:"img/Copas11.gif",
+              vida: false,
+              denominacion: "Copas",
+            },
+            {
+              nombre:"Copas12",
+              path:"img/Copas12.gif",
+              vida: false,
+              denominacion: "Copas",
+            }];
 
           $scope.stack = [];
           $scope.hand1 = [];
           $scope.hand2 = [];
+          $scope.hand3 = [];
+          $scope.hand4 = [];
           $scope.play = [];
           $scope.life;
           $scope.played_cards = [];
-
+          $scope.two_v_two = false;
           var turn1 = true;
           var turn2 = false;
           var disabled = false;
@@ -36,12 +186,19 @@ var app = angular.module('briscasApp', []);
 
           $scope.startGame = function(){
             $scope.fillStack();
+            $scope.getLife();
+            $scope.setVidas();
             $scope.getHand1();
             $scope.getHand2();
-            $scope.getLife();
+            if($scope.two_v_two){
+              $scope.getHand3();
+              $scope.getHand4();
+            }
             disabled = true;
           }
-
+          $scope.twoVtwo = function(){
+            $scope.two_v_two = true;
+          }
           $scope.disabled = function(){
             return disabled;
           }
@@ -60,9 +217,19 @@ var app = angular.module('briscasApp', []);
 
           }
 
+          $scope.setVidas = function(){
+            for(i=0;i<$scope.stack.length;i++){
+              if($scope.stack[i].denominacion === $scope.life.denominacion){
+                $scope.stack[i].vida = true;
+
+              }
+            }
+          }
+
           //life card
           $scope.getLife = function(){
             $scope.life = $scope.stack.pop();
+            $scope.life.vida = true;
           }
 
           //player 1 hand
@@ -79,6 +246,18 @@ var app = angular.module('briscasApp', []);
               $scope.hand2.push($scope.stack.pop());
             }
 
+          }
+
+          $scope.getHand3 = function(){
+            for(i=0;i<3;i++){
+              $scope.hand3.push($scope.stack.pop());
+            }
+          }
+
+          $scope.getHand4 = function(){
+            for(i=0;i<3;i++){
+              $scope.hand4.push($scope.stack.pop());
+            }
           }
 
           $scope.makePlay = function(card){
