@@ -23,294 +23,343 @@ var app = angular.module('briscasApp', []);
               path:"/img/0.png",
               vida: false,
               denominacion: "",
+
             },
             {
               nombre:"Bastos1",
               path:"img/Bastos1.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos2",
               path:"img/Bastos2.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos3",
               path:"img/Bastos3.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos4",
               path:"img/Bastos4.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos5",
               path:"img/Bastos5.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos6",
               path:"img/Bastos6.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos7",
               path:"img/Bastos7.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos8",
               path:"img/Bastos8.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos9",
               path:"img/Bastos9.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos10",
               path:"img/Bastos10.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos11",
               path:"img/Bastos11.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Bastos12",
               path:"img/Bastos12.gif",
               vida: false,
               denominacion: "Bastos",
+
             },
             {
               nombre:"Copas1",
               path:"img/Copas1.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas2",
               path:"img/Copas2.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas3",
               path:"img/Copas3.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas4",
               path:"img/Copas4.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas5",
               path:"img/Copas5.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas6",
               path:"img/Copas6.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas7",
               path:"img/Copas7.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas8",
               path:"img/Copas8.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas9",
               path:"img/Copas9.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas10",
               path:"img/Copas10.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas11",
               path:"img/Copas11.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Copas12",
               path:"img/Copas12.gif",
               vida: false,
               denominacion: "Copas",
+
             },
             {
               nombre:"Espadas1",
               path:"img/Espadas1.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas2",
               path:"img/Espadas2.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas3",
               path:"img/Espadas3.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas4",
               path:"img/Espadas4.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas5",
               path:"img/Espadas5.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas6",
               path:"img/Espadas6.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas7",
               path:"img/Espadas7.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas8",
               path:"img/Espadas8.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas9",
               path:"img/Espadas9.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas10",
               path:"img/Espadas10.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas11",
               path:"img/Espadas11.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Espadas12",
               path:"img/Espadas12.gif",
               vida: false,
               denominacion: "Espadas",
+
             },
             {
               nombre:"Oros1",
               path:"img/Oros1.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros2",
               path:"img/Oros2.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros3",
               path:"img/Oros3.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros4",
               path:"img/Oros4.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros5",
               path:"img/Oros5.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros6",
               path:"img/Oros6.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros7",
               path:"img/Oros7.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros8",
               path:"img/Oros8.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros9",
               path:"img/Oros9.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros10",
               path:"img/Oros10.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros11",
               path:"img/Oros11.gif",
               vida: false,
               denominacion: "Oros",
+
             },
             {
               nombre:"Oros12",
               path:"img/Oros12.gif",
               vida: false,
               denominacion: "Oros",
+
             },
           ];
 
@@ -331,6 +380,7 @@ var app = angular.module('briscasApp', []);
           $scope.hand3 = [];
           $scope.hand4 = [];
           $scope.play = [];
+          $scope.cards_in_play = [];
           $scope.life;
           $scope.played_cards = [];
           $scope.two_v_two = false;
@@ -401,7 +451,6 @@ var app = angular.module('briscasApp', []);
             for(i=0;i<3;i++){
               $scope.hand2.push($scope.stack.pop());
             }
-
           }
 
           $scope.getHand3 = function(){
@@ -416,12 +465,15 @@ var app = angular.module('briscasApp', []);
             }
           }
 
-          $scope.makePlay = function(card){
-
-              $scope.play.push(card);
+          $scope.makePlay = function(card,player){
+            $scope.cards_in_play.push(card);
+            $scope.play.push({
+              player:player,
+              card:card,
+              })
 
               if(turn1){
-                $scope.sendData();
+
                 $scope.removeCard($scope.hand2,card);
               }else{
                 $scope.removeCard($scope.hand1,card);
@@ -459,18 +511,23 @@ var app = angular.module('briscasApp', []);
           }
 
           $scope.evaluatePlay = function(){
-              alert("Card 1 won this play");
+              $scope.sendData();
+              setTimeout(function(){
               $scope.clearBoard();
+              $scope.$apply();
+            }, 3000);
           }
 
           $scope.clearBoard = function(){
             //determine who wins the round...
             //for now this function will randomly determine a winner for testing
             //for now it will not works
-              $scope.played_cards.push($scope.play[0]);
+              $scope.played_cards.push($scope.cards_in_play[0]);
               $scope.removeCard($scope.play,$scope.play[0]);
-              $scope.played_cards.push($scope.play[0]);
+              $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
+              $scope.played_cards.push($scope.cards_in_play[0]);
               $scope.removeCard($scope.play,$scope.play[0]);
+              $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
 
 
           }
@@ -508,12 +565,12 @@ var app = angular.module('briscasApp', []);
 
           $scope.sendData = function(){
             $scope.data_one_v_one = {
-              cards_in_play: $scope.play,
-              agent1_cards: $scope.hand1,
-              played_cards: $scope.played_cards,
+              cards_in_play: JSON.stringify($scope.play),
+              //agent1_cards: $scope.hand1,
+              //played_cards: $scope.played_cards,
 
             };
-            console.log($scope.data_one_v_one);
+          //  console.log($scope.data_one_v_one);
             $scope.briscas_service.sendData($scope.data_one_v_one);
           }
 
@@ -521,7 +578,7 @@ var app = angular.module('briscasApp', []);
               //you also get the actual event object
               //do stuff, execute functions -- whatever...
 
-                if($scope.play.length > 1){
+                if($scope.cards_in_play.length > 1){
                   $scope.evaluatePlay();
                   $scope.drawCard();
               }

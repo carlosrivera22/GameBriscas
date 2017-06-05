@@ -14,6 +14,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+  <title>Briscas Agent</title>
   <body ng-controller="BriscasController">
     <div class="container">
       <h1>Briscas</h1>
@@ -39,7 +40,7 @@
           <h4>Player 1</h4>
             <div class="row">
               <div ng-repeat="card in hand1" class="col-xs-4">
-              <button ng-disabled="getTurn1()" ng-click="makePlay(card)" type="button" class="btn btn-link">
+              <button ng-disabled="getTurn1()" ng-click="makePlay(card,'Player1')" type="button" class="btn btn-link">
                 <img style="width:100px;" src="/img/0.png"/>
                   <img ng-show="false" style="width:100px;" ng-src="{{card.path}}"/>
                   <p ng-if="card == life">Life</p>
@@ -68,7 +69,7 @@
             <h4>Game Board</h4>
             <div id="game-board" class="row">
               <br>
-              <div ng-repeat="card in play" on-finish-render="ngRepeatFinished" class="col-xs-5">
+              <div ng-repeat="card in cards_in_play" on-finish-render="ngRepeatFinished" class="col-xs-5">
                 <img style="width:100px;" ng-src="{{card.path}}">
                 <p ng-if="card == life">Life</p>
               </div>
@@ -95,7 +96,7 @@
            <h4>Player 2</h4>
              <div class="row">
               <div ng-repeat="card in hand2" class="col-xs-4">
-              <button ng-disabled="getTurn2()" ng-click="makePlay(card)"  type="button" class="btn btn-link">
+              <button ng-disabled="getTurn2()" ng-click="makePlay(card,'Player2')"  type="button" class="btn btn-link">
                 <img style="width:100px;" ng-src="{{card.path}}"/>
                 <p ng-if="card == life">Life</p>
 
