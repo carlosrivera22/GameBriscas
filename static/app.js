@@ -1,6 +1,5 @@
 var app = angular.module('briscasApp', []);
 
-
   app.directive('onFinishRender', function ($timeout) {
     return {
         restrict: 'A',
@@ -20,343 +19,343 @@ var app = angular.module('briscasApp', []);
           $scope.deck = [
             {
               nombre:"",
-              path:"/img/0.png",
+              path:"static/img/0.png",
               vida: false,
               denominacion: "",
 
             },
             {
               nombre:"Bastos1",
-              path:"img/Bastos1.gif",
+              path:"static/img/Bastos1.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos2",
-              path:"img/Bastos2.gif",
+              path:"static/img/Bastos2.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos3",
-              path:"img/Bastos3.gif",
+              path:"static/img/Bastos3.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos4",
-              path:"img/Bastos4.gif",
+              path:"static/img/Bastos4.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos5",
-              path:"img/Bastos5.gif",
+              path:"static/img/Bastos5.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos6",
-              path:"img/Bastos6.gif",
+              path:"static/img/Bastos6.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos7",
-              path:"img/Bastos7.gif",
+              path:"static/img/Bastos7.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos8",
-              path:"img/Bastos8.gif",
+              path:"static/img/Bastos8.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos9",
-              path:"img/Bastos9.gif",
+              path:"static/img/Bastos9.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos10",
-              path:"img/Bastos10.gif",
+              path:"static/img/Bastos10.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos11",
-              path:"img/Bastos11.gif",
+              path:"static/img/Bastos11.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Bastos12",
-              path:"img/Bastos12.gif",
+              path:"static/img/Bastos12.gif",
               vida: false,
               denominacion: "Bastos",
 
             },
             {
               nombre:"Copas1",
-              path:"img/Copas1.gif",
+              path:"static/img/Copas1.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas2",
-              path:"img/Copas2.gif",
+              path:"static/img/Copas2.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas3",
-              path:"img/Copas3.gif",
+              path:"static/img/Copas3.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas4",
-              path:"img/Copas4.gif",
+              path:"static/img/Copas4.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas5",
-              path:"img/Copas5.gif",
+              path:"static/img/Copas5.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas6",
-              path:"img/Copas6.gif",
+              path:"static/img/Copas6.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas7",
-              path:"img/Copas7.gif",
+              path:"static/img/Copas7.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas8",
-              path:"img/Copas8.gif",
+              path:"static/img/Copas8.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas9",
-              path:"img/Copas9.gif",
+              path:"static/img/Copas9.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas10",
-              path:"img/Copas10.gif",
+              path:"static/img/Copas10.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas11",
-              path:"img/Copas11.gif",
+              path:"static/img/Copas11.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Copas12",
-              path:"img/Copas12.gif",
+              path:"static/img/Copas12.gif",
               vida: false,
               denominacion: "Copas",
 
             },
             {
               nombre:"Espadas1",
-              path:"img/Espadas1.gif",
+              path:"static/img/Espadas1.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas2",
-              path:"img/Espadas2.gif",
+              path:"static/img/Espadas2.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas3",
-              path:"img/Espadas3.gif",
+              path:"static/img/Espadas3.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas4",
-              path:"img/Espadas4.gif",
+              path:"static/img/Espadas4.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas5",
-              path:"img/Espadas5.gif",
+              path:"static/img/Espadas5.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas6",
-              path:"img/Espadas6.gif",
+              path:"static/img/Espadas6.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas7",
-              path:"img/Espadas7.gif",
+              path:"static/img/Espadas7.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas8",
-              path:"img/Espadas8.gif",
+              path:"static/img/Espadas8.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas9",
-              path:"img/Espadas9.gif",
+              path:"static/img/Espadas9.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas10",
-              path:"img/Espadas10.gif",
+              path:"static/img/Espadas10.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas11",
-              path:"img/Espadas11.gif",
+              path:"static/img/Espadas11.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Espadas12",
-              path:"img/Espadas12.gif",
+              path:"static/img/Espadas12.gif",
               vida: false,
               denominacion: "Espadas",
 
             },
             {
               nombre:"Oros1",
-              path:"img/Oros1.gif",
+              path:"static/img/Oros1.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros2",
-              path:"img/Oros2.gif",
+              path:"static/img/Oros2.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros3",
-              path:"img/Oros3.gif",
+              path:"static/img/Oros3.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros4",
-              path:"img/Oros4.gif",
+              path:"static/img/Oros4.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros5",
-              path:"img/Oros5.gif",
+              path:"static/img/Oros5.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros6",
-              path:"img/Oros6.gif",
+              path:"static/img/Oros6.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros7",
-              path:"img/Oros7.gif",
+              path:"static/img/Oros7.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros8",
-              path:"img/Oros8.gif",
+              path:"static/img/Oros8.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros9",
-              path:"img/Oros9.gif",
+              path:"static/img/Oros9.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros10",
-              path:"img/Oros10.gif",
+              path:"static/img/Oros10.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros11",
-              path:"img/Oros11.gif",
+              path:"static/img/Oros11.gif",
               vida: false,
               denominacion: "Oros",
 
             },
             {
               nombre:"Oros12",
-              path:"img/Oros12.gif",
+              path:"static/img/Oros12.gif",
               vida: false,
               denominacion: "Oros",
 
@@ -510,8 +509,21 @@ var app = angular.module('briscasApp', []);
 
           }
 
+// THIS PART IS IMPORTANT FOR THE PROJECT
+
+          $scope.projectDataReceived = function(data){
+            console.log(data);
+            $scope.data_received = data.hello;
+
+          }
+
+// THIS PART IS IMPORTANT TO THE PROJECT
+
           $scope.evaluatePlay = function(){
-              $scope.sendData();
+              //$scope.sendData();
+              $scope.testing = $scope.briscas_service.getData($scope.projectDataReceived);
+
+              console.log($scope.testing);
               setTimeout(function(){
               $scope.clearBoard();
               $scope.$apply();
