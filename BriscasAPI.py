@@ -1,7 +1,7 @@
 import json
 from random import randint
 import GLbriscas
-from flask import Flask, jsonify, request #import objects from the Flask model
+from flask import Flask, jsonify, request,render_template #import objects from the Flask model
 import requests
 app = Flask(__name__) #define app using Flask
 
@@ -19,8 +19,8 @@ def test():
 def get_winner():
 
     if request.method == "POST":
-        play_dict = request.get_json()
-        #print(play_dict)
+        play_dict = request.get_json(force=True, silent=True)
+        print(play_dict)
         cards_number = len(play_dict)
         #print(cards_number)
         cards_played = []
@@ -32,6 +32,7 @@ def get_winner():
         score = GLbriscas.get_hand_score(cards_played)
         winner = GLbriscas.get_hand_winner(cards_played)
         result = winner,score
+        print(result)
         return jsonify(result)
     else:
 
