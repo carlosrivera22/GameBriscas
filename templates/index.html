@@ -20,6 +20,11 @@
       <h1>Briscas</h1>
       <button ng-disabled="disabled()" type="button" class="btn btn-primary" ng-click="startGame()">Start Game 1V1</button>
       <button ng-disabled="disabled()" type="button" class="btn btn-primary" ng-click="twoVtwo(); startGame() ">Start Game 2V2</button>
+      <h1>Score:</h1>
+      <h4>Player 1: {{'{{score1}}'}}</h4>
+      <h4>Player 2: {{'{{score2}}'}}</h4>
+      <h4 ng-if="two_v_two">Player 3:</h4>
+      <h4 ng-if="two_v_two">Player 4:</h4>
       <hr>
 
       <div class="row">

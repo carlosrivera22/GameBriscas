@@ -349,15 +349,10 @@ var app = angular.module('briscasApp', []);
 
           $scope.briscas_service = briscasService;
 
-
-          $scope.data_two_v_two = {
-            cards_in_play: $scope.play,
-            agent1_cards: $scope.hand1,
-            agent2_cards: $scope.hand3,
-            agent3_cards: $scope.hand4,
-            played_cards: $scope.played_cards,
-          }
-
+          $scope.score1 = 0;
+          $scope.score2 = 0;
+          $scope.score3 = 0;
+          $scope.score4 = 0;
           $scope.stack = [];
           $scope.hand1 = [];
           $scope.hand2 = [];
@@ -377,7 +372,6 @@ var app = angular.module('briscasApp', []);
           $scope.startGame = function(){
             $scope.fillStack();
             $scope.getLife();
-
             $scope.setVidas();
             $scope.getHand1();
             $scope.getHand2();
@@ -474,7 +468,7 @@ var app = angular.module('briscasApp', []);
                 $scope.removeCard($scope.hand1,card);
               }
 
-              $scope.switchTurns()
+             $scope.switchTurns()
 
           }
 
@@ -505,27 +499,28 @@ var app = angular.module('briscasApp', []);
 
           }
 
-// THIS PART IS IMPORTANT FOR THE PROJECT
 
-          $scope.projectDataReceived = function(data){
-            console.log(data);
-            $scope.data_received = data;
 
+
+          $scope.determineTurns = function(winner){
+            if(winner == "player1"){
+              turn1 = false;
+              turn2 = true;
+
+            }else if(winner == "player2"){
+              turn2 = false;
+              turn1 = true;
+            }
           }
-
 // THIS PART IS IMPORTANT TO THE PROJECT
 
           $scope.evaluatePlay = function(){
-
               $scope.sendData($scope.projectDataReceived);
 
               //console.log($scope.data);
               //$scope.testing = $scope.briscas_service.sendData($scope.projectDataReceived);
               //console.log($scope.testing);
-              setTimeout(function(){
-              $scope.clearBoard();
-              $scope.$apply();
-            }, 3000);
+
           }
 
           $scope.clearBoard = function(){
@@ -557,23 +552,75 @@ var app = angular.module('briscasApp', []);
           */
           $scope.drawCard = function(){
             //function will change for the order of draw, winner draws first
-            if($scope.stack.length > 1){
-              //draw for both hands
-              $scope.hand1.push($scope.stack.pop());
-              $scope.hand1[2].Player = "player1";
+            if(turn1){
+              if($scope.stack.length > 1){
+                //draw for both hands
+                $scope.hand1.push($scope.stack.pop());
+                $scope.hand1[2].Player = "player1";
 
-              $scope.hand2.push($scope.stack.pop());
+                $scope.hand2.push($scope.stack.pop());
+                $scope.hand2[2].Player = "player2";
+              }
+              else if($scope.stack.length == 1){
+                //draw for one hand
+                //tomar la vida y si no hay vida entonces una mano coge solamente
+                $scope.hand1.push($scope.stack.pop());
+                $scope.hand1[2].Player = "player1";
+                $scope.hand2.push($scope.life);
+                $scope.hand2[2].Player = "player2";
+
+              }else{
+                stack_is_empty = true;
+              }
             }
-            else if($scope.stack.length == 1){
-              //draw for one hand
-              //tomar la vida y si no hay vida entonces una mano coge solamente
-              $scope.hand1.push($scope.stack.pop());
-              $scope.hand2.push($scope.life);
+            else if(turn2){
+              if($scope.stack.length > 1){
+                //draw for both hands
+                $scope.hand2.push($scope.stack.pop());
+                $scope.hand2[2].Player = "player2";
 
-            }else{
-              stack_is_empty = true;
+                $scope.hand1.push($scope.stack.pop());
+                $scope.hand1[2].Player = "player1";
+              }
+              else if($scope.stack.length == 1){
+                //draw for one hand
+                //tomar la vida y si no hay vida entonces una mano coge solamente
+                $scope.hand2.push($scope.stack.pop());
+                $scope.hand2[2].Player = "player2";
+                $scope.hand1.push($scope.life);
+                $scope.hand1[2].Player = "player1";
+
+              }else{
+                stack_is_empty = true;
+              }
             }
           }
+
+          $scope.updateScores = function(winner,score){
+            if(winner.player == "player1"){
+              $scope.score1 += score;
+            }
+            else if(winner.player == "player2"){
+              $scope.score2 += score;
+            }
+          }
+          $scope.projectDataReceived = function(data){
+            $scope.data_received = angular.fromJson(data);
+            $scope.total_score = $scope.data_received[1];
+            $scope.data_received = $scope.data_received[0][0];
+
+            setTimeout(function(){
+            $scope.clearBoard();
+            $scope.$apply();
+          }, 3000);
+
+          //determinar turnos
+          $scope.updateScores($scope.data_received,$scope.total_score);
+          $scope.drawCard();
+          $scope.determineTurns($scope.data_received.player);
+
+          }
+
 
           $scope.sendData = function(callback){
 
@@ -594,7 +641,7 @@ var app = angular.module('briscasApp', []);
 
                 if($scope.cards_in_play.length > 1){
                   $scope.evaluatePlay();
-                  $scope.drawCard();
+                  //$scope.drawCard();
               }
 
 
