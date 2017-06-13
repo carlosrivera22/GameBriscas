@@ -19,23 +19,25 @@
     <div class="container">
       <h1>Briscas</h1>
       <button ng-disabled="disabled()" type="button" class="btn btn-primary" ng-click="startGame()">Start Game 1V1</button>
-      <button ng-disabled="disabled()" type="button" class="btn btn-primary" ng-click="twoVtwo(); startGame() ">Start Game 2V2</button>
-      <h1>Score:</h1>
-      <h4>Player 1: {{'{{score1}}'}}</h4>
-      <h4>Player 2: {{'{{score2}}'}}</h4>
-      <h4 ng-if="two_v_two">Player 3:</h4>
-      <h4 ng-if="two_v_two">Player 4:</h4>
+      <!--<button ng-disabled="disabled()" type="button" class="btn btn-primary" ng-click="twoVtwo(); startGame() ">Start Game 2V2</button>-->
+
       <hr>
 
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-4">
           <h3>Deck</h3>
           <img ng-if="deckIsNotEmpty()" style="width:100px;" ng-src="{{'{{deck[0].path}}'}}"/>
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-4">
           <h3>Vida</h3>
           <img style="width:100px;" ng-src="{{'{{life.path}}'}}"/>
-
+        </div>
+        <div class="col-xs-4">
+          <h1>Score:</h1>
+          <h4>Player 1: {{'{{score1}}'}}</h4>
+          <h4>Player 2: {{'{{score2}}'}}</h4>
+          <h4 ng-if="two_v_two">Player 3: {{'{{score3}}'}}</h4>
+          <h4 ng-if="two_v_two">Player 4: {{'{{score4}}'}}</h4>
         </div>
       </div>
       <hr>
@@ -45,7 +47,7 @@
           <h4>Player 1</h4>
             <div class="row">
               <div ng-repeat="card in hand1" class="col-xs-4">
-              <button ng-disabled="getTurn1()" ng-click="makePlay(card,'Player1')" type="button" class="btn btn-link">
+              <button ng-disabled="getTurn1()" ng-click="makePlay(card,'player1')" type="button" class="btn btn-link">
                 <img style="width:100px;" ng-src="{{'{{deck[0].path}}'}}"/>
                   <img ng-show="false" style="width:100px;" ng-src="{{'{{card.path}}'}}"/>
                   <p ng-if="card == life">Life</p>
@@ -60,18 +62,19 @@
           <div ng-if="two_v_two" class="col-md-3">
             <h4>Player 3</h4>
               <div class="row">
-                <div ng-repeat="card in hand1" class="col-xs-4">
-                <button ng-disabled="getTurn1()" ng-click="makePlay(card)" type="button" class="btn btn-link">
+                <div ng-repeat="card in hand3" class="col-xs-4">
+                <button ng-disabled="getTurn3()" ng-click="makePlay(card,'player3')" type="button" class="btn btn-link">
                   <img style="width:100px;" ng-src="{{'{{deck[0].path}}'}}"/>
                     <img ng-show="false" style="width:100px;" ng-src="{{'{{card.path}}'}}"/>
                     <p ng-if="card == life">Life</p>
 
                 </button>
                 </div>
+
               </div>
           </div>
           <div class="col-md-3 " style="margin-left:11.666667%;">
-            <h4>Game Board {{'{{data_received}}'}}</h4>
+            <h4>Game Board</h4>
             <div id="game-board" class="row">
               <br>
               <div ng-repeat="card in cards_in_play" on-finish-render="ngRepeatFinished" class="col-xs-5">
@@ -84,8 +87,8 @@
           <div ng-if="two_v_two" class="col-md-3 col-md-offset-1">
             <h4>Player 4</h4>
               <div class="row">
-                <div ng-repeat="card in hand1" class="col-xs-4">
-                <button ng-disabled="getTurn1()" ng-click="makePlay(card)" type="button" class="btn btn-link">
+                <div ng-repeat="card in hand4" class="col-xs-4">
+                <button ng-disabled="getTurn4()" ng-click="makePlay(card,'player4')" type="button" class="btn btn-link">
                   <img style="width:100px;" ng-src="{{'{{deck[0].path}}'}}"/>
                     <img ng-show="false" style="width:100px;" ng-src="{{'{{card.path}}'}}"/>
                     <p ng-if="card == life">Life</p>
@@ -101,7 +104,7 @@
            <h4>Player 2</h4>
              <div class="row">
               <div ng-repeat="card in hand2" class="col-xs-4">
-              <button ng-disabled="getTurn2()" ng-click="makePlay(card,'Player2')"  type="button" class="btn btn-link">
+              <button ng-disabled="getTurn2()" ng-click="makePlay(card,'player2')"  type="button" class="btn btn-link">
                 <img style="width:100px;" ng-src="{{'{{card.path}}'}}"/>
                 <p ng-if="card == life">Life</p>
 

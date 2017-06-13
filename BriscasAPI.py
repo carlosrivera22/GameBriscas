@@ -8,7 +8,7 @@ app = Flask(__name__) #define app using Flask
 game_rooms={}
 
 values = {"As": 11, "Dos": 0, "Tres": 10, "Cuatro": 0, "Cinco": 0,"Seis": 0, "Siete": 0, "Sota": 2, "Caballero": 3, "Rey": 4}
-ranks = {"As": 0, "Dos": 9, "Tres": 1, "Cuatro": 8, "Cinco": 7,"Seis": 6, "Siete": 5, "Sota": 2, "Caballero": 3, "Rey": 4}
+ranks = {"As": 0, "Dos": 9, "Tres": 1, "Cuatro": 8, "Cinco": 7,"Seis": 6, "Siete": 5, "Sota": 4, "Caballero": 3, "Rey": 2}
 
 @app.route("/", methods=["GET"])
 def test():
@@ -20,7 +20,7 @@ def get_winner():
 
     if request.method == "POST":
         play_dict = request.get_json(force=True, silent=True)
-        print(play_dict)
+        #print(play_dict)
         cards_number = len(play_dict)
         #print(cards_number)
         cards_played = []

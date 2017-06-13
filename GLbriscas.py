@@ -253,7 +253,7 @@ def get_hand_winner(played_cards):
     if len(trumps_played) == 0:
         max_card = played_cards[0]
         for card in played_cards:
-            if card['suit'] == max_card['suit'] and card['rank'] > max_card['rank']:
+            if card['suit'] == max_card['suit'] and card['rank'] < max_card['rank']:
                 max_card = card
 
     elif len(trumps_played) == 1:
@@ -262,10 +262,13 @@ def get_hand_winner(played_cards):
     else:
         max_card = trumps_played[0]
         for card in trumps_played:
-            if card['rank'] > max_card['rank']:
+            if card['rank'] < max_card['rank']:
                 max_card = card
+    score = get_hand_score(played_cards)
+    result = {"card": max_card, "player": max_card['player'], "score": score}
 
-    return max_card, max_card['player']
+    return result
+
 
 def get_hand_score(cards_played):
     score = 0
@@ -273,24 +276,3 @@ def get_hand_score(cards_played):
         score += card['value']
 
     return score
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

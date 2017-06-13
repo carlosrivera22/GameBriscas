@@ -6,10 +6,10 @@ To run:
 
   cd Downloads/GameBriscas
 
-3) On terminal run python server like this:
+3) On terminal run BriscasAPI.py:
 
-   python -m SimpleHTTPServer 8000
+   python BriscasAPI.py
 
 In your browser go to:
 
-  http://localhost:8000/
+  http://127.0.0.1:8080/
