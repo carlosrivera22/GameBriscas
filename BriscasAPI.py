@@ -81,6 +81,16 @@ def random_play(room_id, player):
     else:
         return jsonify({"message": "Room not found!"})
 
+@app.route("/get_play", methods=["POST"])
+def get_play():
+    if request.method == "POST":
+        play_dict = request.get_json(force=True, silent=True)
+
+        #TODO Processing and calling ai
+        return jsonify({"card":{"Player": "player1", "denominacion": "Espada", "nombre": "As", "vida": "False"}})
+    else:
+        return jsonify({"message": "play not found!"})
+
 
 #@app.route("/get_winner/<string:room_id>")
 #def get_winner(room_id):

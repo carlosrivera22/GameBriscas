@@ -442,7 +442,7 @@ var app = angular.module('briscasApp', []);
               $scope.hand3.push($scope.stack.pop());
               $scope.hand3[i].Player = "player3";
             }
-            console.log($scope.hand3);
+
           }
 
           $scope.getHand4 = function(){
@@ -472,25 +472,11 @@ var app = angular.module('briscasApp', []);
                   $scope.removeCard($scope.hand1,card);
                 }
               }
-              /*
-              else{
 
-              //  if(turn1){
-                  $scope.removeCard($scope.hand4,card);
-                //}
-              //  else if(turn2){
-                  $scope.removeCard($scope.hand3,card);
-              //  }
-              //  else if(turn3){
-                  $scope.removeCard($scope.hand2,card);
-              //  }
-                //else if(turn4){
-                  $scope.removeCard($scope.hand1,card)
-              //  }
-
-              }
-              */
-             $scope.switchTurns()
+             $scope.switchTurns();
+            if(turn2){
+               $scope.sendGameData($scope.playReceived);
+            }
 
           }
 
@@ -520,34 +506,7 @@ var app = angular.module('briscasApp', []);
                   turn1 = true;
                 }
               }
-              /*
-              else{
-                if(turn1 == false){
-                  turn1 = true;
-                  turn2 = true;
-                  turn3 = false;
-                  turn4 = true;
-                }
-                else if(turn2 == false){
-                  turn1 = true;
-                  turn2 = true;
-                  turn3 = true;
-                  turn4 = false;
-                }
-                else if(turn3 == false){
-                  turn1 = true;
-                  turn2 = false;
-                  turn3 = true;
-                  turn4 = true;
-                }
-                else if(turn4 == false){
-                  turn1 = false;
-                  turn2 = true;
-                  turn3 = true;
-                  turn4 = true;
-                }
-              }
-              */
+
 
           }
 
@@ -573,48 +532,13 @@ var app = angular.module('briscasApp', []);
                 turn2 = false;
               }
             }
-            /*
-            else{
-              if(winner == "player1"){
-                turn1 = false;
-                turn2 = true;
-                turn3 = true;
-                turn4 = true;
-
-              }else if(winner == "player2"){
-                turn2 = false;
-                turn1 = true;
-                turn3 = true;
-                turn4 = true;
-              }else if(winner == "player3"){
-                turn1 = true;
-                turn2 = true;
-                turn3 = false;
-                turn4 = true;
-              }else if(winner == "player4"){
-                turn1 = true;
-                turn2 = true;
-                turn3 = true;
-                turn4 = false;
-              }
-            }
-            */
-          }
-// THIS PART IS IMPORTANT TO THE PROJECT
-
-          $scope.evaluatePlay = function(){
-              $scope.sendData($scope.projectDataReceived);
-
-              //console.log($scope.data);
-              //$scope.testing = $scope.briscas_service.sendData($scope.projectDataReceived);
-              //console.log($scope.testing);
 
           }
+
+
 
           $scope.clearBoard = function(){
-            //determine who wins the round...
-            //for now this function will randomly determine a winner for testing
-            //for now it will not works
+
             if(!$scope.two_v_two){
               $scope.played_cards.push($scope.cards_in_play[0]);
               $scope.removeCard($scope.play,$scope.play[0]);
@@ -623,23 +547,6 @@ var app = angular.module('briscasApp', []);
               $scope.removeCard($scope.play,$scope.play[0]);
               $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
             }
-            /*
-            else{
-              $scope.played_cards.push($scope.cards_in_play[0]);
-              $scope.removeCard($scope.play,$scope.play[0]);
-              $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
-              $scope.played_cards.push($scope.cards_in_play[0]);
-              $scope.removeCard($scope.play,$scope.play[0]);
-              $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
-
-              $scope.played_cards.push($scope.cards_in_play[0]);
-              $scope.removeCard($scope.play,$scope.play[0]);
-              $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
-              $scope.played_cards.push($scope.cards_in_play[0]);
-              $scope.removeCard($scope.play,$scope.play[0]);
-              $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
-            }
-            */
 
           }
 
@@ -647,17 +554,9 @@ var app = angular.module('briscasApp', []);
             return !stack_is_empty;
           }
 
-          /*
-          $scope.lifeIsDrawn = function(){
-            if($scope.hand2.indexOf($scope.life) != -1 || $scope.hand1.indexOf($scope.life) != -1 || $scope.play.indexOf($scope.life) != -1 || $scope.played_cards.indexOf($scope.life) != -1){
-              return false;
-            }else{
-              return true;
-            }
-          }
-          */
+
           $scope.drawCard = function(){
-            //function will change for the order of draw, winner draws first
+
             if(!$scope.two_v_two){
               if(turn1){
                 if($scope.stack.length > 1){
@@ -677,6 +576,7 @@ var app = angular.module('briscasApp', []);
                   $scope.hand2[2].Player = "player2";
 
                 }else{
+
                   stack_is_empty = true;
                 }
               }
@@ -698,185 +598,23 @@ var app = angular.module('briscasApp', []);
                   $scope.hand1[2].Player = "player1";
 
                 }else{
+
                   stack_is_empty = true;
                 }
               }
             }
-            /*
-            else{
-              if(turn1){
-                if($scope.stack.length > 1){
-                  //draw for all hands
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-                }
-                else if($scope.stack.length == 1){
-                  //draw for one hand
-                  //tomar la vida y si no hay vida entonces una mano coge solamente
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-                  $scope.hand2.push($scope.life);
-                  $scope.hand2[2].Player = "player2";
-
-                }else{
-                  stack_is_empty = true;
-                }
+            if($scope.hand1.length == 0 && $scope.hand2.length == 0){
+              if($scope.score1 > $scope.score2){
+                alert("Player 1 Wins!");
               }
-              else if(turn2){
-                if($scope.stack.length > 3){
-                  //draw for both hands
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-                }
-                else if($scope.stack.length > 2){
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-                }
-
-                else if ($scope.stack.length > 1) {
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                }
-                else if($scope.stack.length == 1){
-                  //draw for one hand
-                  //tomar la vida y si no hay vida entonces una mano coge solamente
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-                  $scope.hand4.push($scope.life);
-                  $scope.hand4[2].Player = "player4";
-
-                }else{
-                  stack_is_empty = true;
-                }
+              else if($scope.score1 < $scope.score2){
+                alert("Player 2 Wins!");
               }
-              else if (turn3) {
-                if($scope.stack.length > 3){
-                  //draw for both hands
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-
-
-                }
-                else if($scope.stack.length > 2){
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-                }
-                else if($scope.stack.length > 1){
-                  //draw for both hands
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                }
-                else if($scope.stack.length == 1){
-                  //draw for one hand
-                  //tomar la vida y si no hay vida entonces una mano coge solamente
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-                  $scope.hand2.push($scope.life);
-                  $scope.hand2[2].Player = "player2";
-
-                }else{
-                  stack_is_empty = true;
-                }
-              }
-              else if (turn4) {
-                if($scope.stack.length > 3){
-                  //draw for both hands
-
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-
-                  $scope.hand2.push($scope.stack.pop());
-                  $scope.hand2[2].Player = "player2";
-
-                }
-                else if($scope.stack.length > 2){
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-
-                  $scope.hand3.push($scope.stack.pop());
-                  $scope.hand3[2].Player = "player3";
-
-
-                }
-                else if($scope.stack.length > 1){
-                  //draw for both hands
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-
-                  $scope.hand1.push($scope.stack.pop());
-                  $scope.hand1[2].Player = "player1";
-
-                }
-                else if($scope.stack.length == 1){
-                  //draw for one hand
-                  //tomar la vida y si no hay vida entonces una mano coge solamente
-                  $scope.hand4.push($scope.stack.pop());
-                  $scope.hand4[2].Player = "player4";
-                  $scope.hand1.push($scope.life);
-                  $scope.hand1[2].Player = "player1";
-
-                }else{
-                  stack_is_empty = true;
-                }
+              else{
+                alert("The Game is a Draw!");
               }
             }
-            */
+
           }
 
           $scope.updateScores = function(winner,score){
@@ -889,31 +627,25 @@ var app = angular.module('briscasApp', []);
               alert("Player2 won this hand.");
               $scope.score2 += score;
             }
-            /*
-            else if(winner.player == "player3"){
-              alert("Player3 won this hand.");
-              $scope.score3 += score;
-            }
-            else if(winner.player == "player4"){
-              alert("Player4 won this hand.");
-              $scope.score4 += score;
-            }
-            */
 
+          }
+
+          $scope.playReceived = function(data){
+            console.log(data);
           }
           $scope.projectDataReceived = function(data){
             $scope.data_received = data[0];
             $scope.total_score = data[1];
-          //determinar turnos
-          $scope.updateScores($scope.data_received,$scope.total_score);
-          setTimeout(function(){
-          $scope.clearBoard();
-          $scope.$apply();
-        }, 500);
-          $scope.drawCard();
-          $scope.determineTurns($scope.data_received.player);
+            //determinar turnos
+            $scope.updateScores($scope.data_received,$scope.total_score);
+            setTimeout(function(){
+            $scope.clearBoard();
+            $scope.$apply();
+            }, 100);
+            $scope.drawCard();
+            $scope.determineTurns($scope.data_received.player);
 
-          }
+            }
 
 
           $scope.sendData = function(callback){
@@ -925,27 +657,42 @@ var app = angular.module('briscasApp', []);
 
             };
             $scope.briscas_service.sendData($scope.data.cards_in_play,callback);
-
           }
+
+          $scope.sendGameData = function(callback){
+            var unplayed_cards = $scope.stack.concat($scope.hand2);
+            for(i=0;i<unplayed_cards.length;i++){
+              unplayed_cards.player = "";
+            }
+            $scope.game_data = {
+              number_of_players: 2,
+              player_to_move: "Player1",
+              deck: unplayed_cards,
+              trash: $scope.played_cards,
+              cards_in_play: $scope.cards,
+              hand: $scope.hand1,
+              player_score: $scope.score1,
+              vida: $scope.life,
+            }
+            $scope.agent_data = {
+              data: JSON.stringify($scope.game_data),
+            }
+            console.log($scope.agent_data);
+            $scope.briscas_service.sendAgentData($scope.agent_data.data,callback)
+          }
+
 
           $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
               //you also get the actual event object
               //do stuff, execute functions -- whatever...
               if(!$scope.two_v_two){
                 if($scope.cards_in_play.length > 1){
-                  //$scope.evaluatePlay();
+
                   $scope.sendData($scope.projectDataReceived);
-                  //$scope.drawCard();
+
               }
             }
-            /*
-            else{
-                if($scope.cards_in_play.length > 3){
-                  //$scope.evaluatePlay();
-                  $scope.sendData($scope.projectDataReceived);
-                }
-          }
-          */
+
 
           });
 
