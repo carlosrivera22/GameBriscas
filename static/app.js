@@ -108,7 +108,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"As",
-              path:"static/img/Copas1.gif",
+              path:"static/img/Copa1.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -116,7 +116,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Dos",
-              path:"static/img/Copas2.gif",
+              path:"static/img/Copa2.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -124,7 +124,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Tres",
-              path:"static/img/Copas3.gif",
+              path:"static/img/Copa3.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -132,7 +132,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Cuatro",
-              path:"static/img/Copas4.gif",
+              path:"static/img/Copa4.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -140,7 +140,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Cinco",
-              path:"static/img/Copas5.gif",
+              path:"static/img/Copa5.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -148,7 +148,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Seis",
-              path:"static/img/Copas6.gif",
+              path:"static/img/Copa6.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -156,7 +156,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Siete",
-              path:"static/img/Copas7.gif",
+              path:"static/img/Copa7.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -164,7 +164,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Sota",
-              path:"static/img/Copas10.gif",
+              path:"static/img/Copa10.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -172,7 +172,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Caballero",
-              path:"static/img/Copas11.gif",
+              path:"static/img/Copa11.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -180,7 +180,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Rey",
-              path:"static/img/Copas12.gif",
+              path:"static/img/Copa12.gif",
               vida: "False",
               denominacion: "Copa",
 
@@ -188,7 +188,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"As",
-              path:"static/img/Espadas1.gif",
+              path:"static/img/Espada1.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -196,7 +196,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Dos",
-              path:"static/img/Espadas2.gif",
+              path:"static/img/Espada2.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -204,7 +204,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Tres",
-              path:"static/img/Espadas3.gif",
+              path:"static/img/Espada3.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -212,7 +212,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Cuatro",
-              path:"static/img/Espadas4.gif",
+              path:"static/img/Espada4.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -220,7 +220,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Cinco",
-              path:"static/img/Espadas5.gif",
+              path:"static/img/Espada5.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -228,7 +228,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Seis",
-              path:"static/img/Espadas6.gif",
+              path:"static/img/Espada6.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -236,7 +236,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Siete",
-              path:"static/img/Espadas7.gif",
+              path:"static/img/Espada7.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -244,7 +244,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Sota",
-              path:"static/img/Espadas10.gif",
+              path:"static/img/Espada10.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -252,7 +252,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Caballero",
-              path:"static/img/Espadas11.gif",
+              path:"static/img/Espada11.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -260,7 +260,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Rey",
-              path:"static/img/Espadas12.gif",
+              path:"static/img/Espada12.gif",
               vida: "False",
               denominacion: "Espada",
 
@@ -268,7 +268,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"As",
-              path:"static/img/Oros1.gif",
+              path:"static/img/Oro1.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -276,7 +276,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Dos",
-              path:"static/img/Oros2.gif",
+              path:"static/img/Oro2.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -284,7 +284,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Tres",
-              path:"static/img/Oros3.gif",
+              path:"static/img/Oro3.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -292,7 +292,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Cuatro",
-              path:"static/img/Oros4.gif",
+              path:"static/img/Oro4.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -300,7 +300,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Cinco",
-              path:"static/img/Oros5.gif",
+              path:"static/img/Oro5.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -308,7 +308,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Seis",
-              path:"static/img/Oros6.gif",
+              path:"static/img/Oro6.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -316,7 +316,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Siete",
-              path:"static/img/Oros7.gif",
+              path:"static/img/Oro7.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -324,7 +324,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Sota",
-              path:"static/img/Oros10.gif",
+              path:"static/img/Oro10.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -332,7 +332,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Caballero",
-              path:"static/img/Oros11.gif",
+              path:"static/img/Oro11.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -340,7 +340,7 @@ var app = angular.module('briscasApp', []);
             {
               Player: "",
               nombre:"Rey",
-              path:"static/img/Oros12.gif",
+              path:"static/img/Oro12.gif",
               vida: "False",
               denominacion: "Oro",
 
@@ -359,6 +359,9 @@ var app = angular.module('briscasApp', []);
           $scope.hand3 = [];
           $scope.hand4 = [];
           $scope.play = [];
+          $scope.cards = {
+            cards: $scope.play,
+          };
           $scope.cards_in_play = [];
           $scope.life;
           $scope.played_cards = [];
@@ -381,10 +384,17 @@ var app = angular.module('briscasApp', []);
               $scope.getHand4();
             }
             disabled = true;
+            card = {
+              Player: "",
+              nombre:"",
+              path:"",
+              vida: "",
+              denominacion: "",
+            };
+            $scope.sendGameData($scope.playReceived)
+
           }
-          $scope.twoVtwo = function(){
-            $scope.two_v_two = true;
-          }
+
           $scope.disabled = function(){
             return disabled;
           }
@@ -401,6 +411,11 @@ var app = angular.module('briscasApp', []);
 
             }
 
+          }
+
+          $scope.getRandom = function(arr){
+            var rand = Math.floor((Math.random() * arr.length));
+            return arr[rand];
           }
 
           $scope.setVidas = function(){
@@ -452,10 +467,10 @@ var app = angular.module('briscasApp', []);
             }
           }
 
-          $scope.makePlay = function(card,player){
+          $scope.makePlay = function(card){
+
             $scope.cards_in_play.push(card);
             $scope.play.push({
-            //  player:player,
                 Player: card.Player,
                 denominacion: card.denominacion,
                 nombre: card.nombre,
@@ -465,18 +480,20 @@ var app = angular.module('briscasApp', []);
                 cards: $scope.play,
               }
 
-              if(!$scope.two_v_two){
+               $scope.switchTurns();
                 if(turn1){
-                  $scope.removeCard($scope.hand2,card);
-                }else{
                   $scope.removeCard($scope.hand1,card);
-                }
-              }
+                  console.log($scope.hand1);
+                }else{
+                  $scope.removeCard($scope.hand2,card);
 
-             $scope.switchTurns();
-            if(turn2){
-               $scope.sendGameData($scope.playReceived);
-            }
+                }
+          
+                  setTimeout(function(){
+                    $scope.sendGameData($scope.playReceived)
+                  $scope.$apply();
+                }, 1000);
+
 
           }
 
@@ -518,9 +535,6 @@ var app = angular.module('briscasApp', []);
 
           }
 
-
-
-
           $scope.determineTurns = function(winner){
             if(!$scope.two_v_two){
               if(winner == "player1"){
@@ -535,8 +549,6 @@ var app = angular.module('briscasApp', []);
 
           }
 
-
-
           $scope.clearBoard = function(){
 
             if(!$scope.two_v_two){
@@ -547,8 +559,19 @@ var app = angular.module('briscasApp', []);
               $scope.removeCard($scope.play,$scope.play[0]);
               $scope.removeCard($scope.cards_in_play,$scope.cards_in_play[0]);
             }
-
+              if($scope.hand1.length == 0 && $scope.hand2.length == 0 ) {
+                if($scope.score1 > $scope.score2){
+                  alert("Player 1 wins!");
+                }
+                else if($scope.score1 < $scope.score2){
+                  alert("Player 2 wins!");
+                }
+                else{
+                  alert("Tied Game! It's a draw.")
+                }
+              }
           }
+
 
           $scope.deckIsNotEmpty = function(){
             return !stack_is_empty;
@@ -603,50 +626,63 @@ var app = angular.module('briscasApp', []);
                 }
               }
             }
-            if($scope.hand1.length == 0 && $scope.hand2.length == 0){
-              if($scope.score1 > $scope.score2){
-                alert("Player 1 Wins!");
-              }
-              else if($scope.score1 < $scope.score2){
-                alert("Player 2 Wins!");
-              }
-              else{
-                alert("The Game is a Draw!");
-              }
-            }
+
 
           }
 
           $scope.updateScores = function(winner,score){
 
             if(winner.player == "player1"){
+              setTimeout(function(){
               alert("Player1 won this hand.");
+              $scope.$apply();
+            }, 1000);
+
               $scope.score1 += score;
             }
             else if(winner.player == "player2"){
+              setTimeout(function(){
               alert("Player2 won this hand.");
+              $scope.$apply();
+            }, 1000);
               $scope.score2 += score;
             }
 
           }
 
           $scope.playReceived = function(data){
-            console.log(data);
-          }
+
+              for(i=0;i<$scope.hand2.length;i++){
+                if(data.card.path == $scope.hand2[i].path){
+                  $scope.makePlay($scope.hand2[i]);
+
+                }
+              }
+
+              for(j=0;j<$scope.hand1.length;j++){
+                if(data.card.path == $scope.hand1[j].path){
+                  $scope.makePlay($scope.hand1[j]);
+
+                }
+              }
+
+
+            }
+
           $scope.projectDataReceived = function(data){
             $scope.data_received = data[0];
             $scope.total_score = data[1];
             //determinar turnos
             $scope.updateScores($scope.data_received,$scope.total_score);
+
             setTimeout(function(){
             $scope.clearBoard();
             $scope.$apply();
-            }, 100);
+          }, 1000);
             $scope.drawCard();
             $scope.determineTurns($scope.data_received.player);
 
             }
-
 
           $scope.sendData = function(callback){
 
@@ -660,20 +696,49 @@ var app = angular.module('briscasApp', []);
           }
 
           $scope.sendGameData = function(callback){
+
             var unplayed_cards = $scope.stack.concat($scope.hand2);
+            var score, hand, player;
             for(i=0;i<unplayed_cards.length;i++){
               unplayed_cards.player = "";
             }
-            $scope.game_data = {
-              number_of_players: 2,
-              player_to_move: "Player1",
-              deck: unplayed_cards,
-              trash: $scope.played_cards,
-              cards_in_play: $scope.cards,
-              hand: $scope.hand1,
-              player_score: $scope.score1,
-              vida: $scope.life,
+            if(turn1){
+              $scope.game_data = {
+                number_of_players: 2,
+                deck: unplayed_cards,
+                trash: $scope.played_cards,
+                cards_in_play: $scope.cards,
+                hand: $scope.hand2,
+                hand1: $scope.hand1.length,
+                hand2: $scope.hand2.length,
+                player_score: $scope.score2,
+                vida: $scope.life,
+                score1: $scope.score1,
+                score2: $scope.score2,
+                player_to_move: 2,
+              }
             }
+
+            if(turn2){
+              $scope.game_data = {
+                number_of_players: 2,
+                deck: unplayed_cards,
+                trash: $scope.played_cards,
+                cards_in_play: $scope.cards,
+                hand: $scope.hand1,
+                hand1: $scope.hand1.length,
+                hand2: $scope.hand2.length,
+                player_score: $scope.score1,
+                vida: $scope.life,
+                score1: $scope.score1,
+                score2: $scope.score2,
+                player_to_move: 1,
+              }
+            }
+
+
+
+
             $scope.agent_data = {
               data: JSON.stringify($scope.game_data),
             }
@@ -685,15 +750,12 @@ var app = angular.module('briscasApp', []);
           $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
               //you also get the actual event object
               //do stuff, execute functions -- whatever...
-              if(!$scope.two_v_two){
-                if($scope.cards_in_play.length > 1){
-
+                if($scope.cards_in_play.length == 2){
                   $scope.sendData($scope.projectDataReceived);
-
-              }
-            }
+                }
 
 
           });
+
 
       });
