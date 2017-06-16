@@ -413,10 +413,6 @@ var app = angular.module('briscasApp', []);
 
           }
 
-          $scope.getRandom = function(arr){
-            var rand = Math.floor((Math.random() * arr.length));
-            return arr[rand];
-          }
 
           $scope.setVidas = function(){
             for(i=0;i<$scope.stack.length;i++){
@@ -488,7 +484,7 @@ var app = angular.module('briscasApp', []);
                   $scope.removeCard($scope.hand2,card);
 
                 }
-          
+
                   setTimeout(function(){
                     $scope.sendGameData($scope.playReceived)
                   $scope.$apply();
